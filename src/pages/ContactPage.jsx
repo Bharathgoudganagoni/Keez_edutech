@@ -25,21 +25,21 @@ const ContactPage = () => {
                 <FaMapMarkerAlt size={24} style={{ color: 'var(--color-accent)' }} />
                 <div>
                   <h4 style={{ marginBottom: '0.25rem' }}>Our Location</h4>
-                  <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>123 Innovation Drive, Tech Park, San Jose, CA 95134</p>
+                  <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>Hyderabad,Telangana</p>
                 </div>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                 <FaPhoneAlt size={24} style={{ color: 'var(--color-accent)' }} />
                 <div>
                   <h4 style={{ marginBottom: '0.25rem' }}>Phone Number</h4>
-                  <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>+1 (800) 123-4567</p>
+                  <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>+91 97043 99488</p>
                 </div>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                 <FaEnvelope size={24} style={{ color: 'var(--color-accent)' }} />
                 <div>
                   <h4 style={{ marginBottom: '0.25rem' }}>Email Address</h4>
-                  <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>hello@keezcampus.com</p>
+                  <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>Srikanth@Keezenix.com</p>
                 </div>
               </li>
             </ul>

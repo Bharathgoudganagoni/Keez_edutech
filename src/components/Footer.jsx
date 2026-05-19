@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-about">
             <Link to="/" className="nav-logo" style={{ display: 'inline-block', background: 'white', padding: '10px 20px', borderRadius: '8px', marginBottom: '1rem' }}>
-              <img src="/logo.png" alt="KeeZ-Edutech Logo" style={{ height: '60px', objectFit: 'contain', display: 'block' }} />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="KeeZ Campus Logo" style={{ height: '60px', objectFit: 'contain', display: 'block' }} />
             </Link>
             <p>Empowering the next generation of tech leaders with industry-ready skills and professional mentorship.</p>
             <div className="footer-socials">
@@ -48,15 +48,15 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>
                 <FaMapMarkerAlt className="icon" />
-                <span>123 Innovation Drive, Tech Park, San Jose, CA 95134</span>
+                <span>Hyderabad,Telangana</span>
               </li>
               <li>
                 <FaPhoneAlt className="icon" />
-                <span>+1 (800) 123-4567</span>
+                <span>+91 97043 99488</span>
               </li>
               <li>
                 <FaEnvelope className="icon" />
-                <span>hello@keezcampus.com</span>
+                <span>Srikanth@Keezenix.com</span>
               </li>
             </ul>
           </div>
