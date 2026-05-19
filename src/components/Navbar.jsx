@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { FaUserCircle } from 'react-icons/fa';
+import { useAuth } from '../context/AuthContext';
 import '../styles/navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
@@ -140,21 +143,25 @@ const Navbar = () => {
         {/* DESKTOP ACTIONS */}
         <div
           className={`nav-actions ${mobileMenuOpen ? 'mobile-hidden' : ''}`}
-          style={{
-            display: mobileMenuOpen ? 'none' : 'flex'
-          }}
+          style={{ display: mobileMenuOpen ? 'none' : 'flex' }}
         >
-          <Link
-            to="/login"
-            className="login-btn"
-            style={{ textDecoration: 'none' }}
-          >
-            Login
-          </Link>
-
-          <button className="btn btn-primary">
-            Join Now
-          </button>
+          {user ? (
+            <>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: 'var(--color-primary)' }}>
+                {user.photoURL
+                  ? <img src={user.photoURL} alt="avatar" style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover' }} />
+                  : <FaUserCircle size={28} />}
+                <span style={{ fontSize: '0.875rem' }}>{user.displayName || user.email?.split('@')[0]}</span>
+              </div>
+              <button className="btn btn-outline" onClick={async () => { await logout(); navigate('/'); }}
+                style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="login-btn" style={{ textDecoration: 'none' }}>Login</Link>
+              <Link to="/login"><button className="btn btn-primary">Join Now</button></Link>
+            </>
+          )}
         </div>
 
         {/* MOBILE MENU BUTTON */}
