@@ -34,7 +34,16 @@ const Navbar = () => {
       <div className="container">
         <Link to="/" className="nav-logo" onClick={closeMobileMenu}>
           {/* Use the provided logo image instead of text/icon */}
-          <img src="/logo.png" alt="KeeZ-Edutech Logo" style={{ height: '80px', objectFit: 'contain' }} />
+          <Link to="/" className="nav-logo" onClick={closeMobileMenu}>
+  <img
+    src={`${import.meta.env.BASE_URL}logo.png`}
+    alt="KeeZ-Edutech Logo"
+    style={{
+      height: '80px',
+      objectFit: 'contain'
+    }}
+  />
+</Link>
         </Link>
 
         <ul className={`nav-links ${mobileMenuOpen ? 'mobile-active' : ''}`}>
