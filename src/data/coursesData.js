@@ -2,41 +2,66 @@ export const coursesData = {
   "full-stack-development": {
     title: "Full Stack Development",
     slug: "full-stack-development",
-    tagline: "Become a professional software engineer. Master front-end and back-end development to build robust web applications from scratch.",
+    tagline: "Become a top 1% Software Engineer. Master front-end and back-end development to build robust web applications from scratch.",
     shortDesc: "Master React, Node.js, and MongoDB. Build real-world projects and get industry-ready.",
     overview: "Get ready to build, launch, and manage scalable web applications. This comprehensive program covers everything from structuring beautiful front-end designs with React to architecting backend services with Node.js and MongoDB. Learn industry-standard practices, system design, and database modeling to stand out as a highly skilled full stack developer.",
     duration: "6 Months",
+    durationWeeks: 24,
     level: "Beginner to Pro",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    price: "₹39,999",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
     industryRelevance: "Every digital company needs software engineers who understand the complete web ecosystem. Mastering both client-side and server-side development gives you unmatched adaptability, allowing you to architect database schemas, design secure APIs, and craft responsive user experiences.",
     technologies: [
-      "HTML", "CSS", "JavaScript", "React.js", "Node.js", "Express.js", 
-      "MongoDB", "APIs", "Git & GitHub", "Deployment", "Authentication", "Responsive Design"
+      "HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Node.js", "Express.js", 
+      "MongoDB", "REST APIs", "Git & GitHub", "AWS / Deployment", "JWT Auth", "Tailwind CSS"
     ],
-    modules: [
+    curriculum: [
       {
-        title: "Module 1: Front-end Foundations",
-        desc: "Learn semantic HTML, modern responsive CSS (Flexbox/Grid), and intermediate JavaScript. Build responsive static websites."
+        week: "Weeks 1-4",
+        title: "Front-end Foundations & Web Architecture",
+        desc: "Learn semantic HTML, modern responsive CSS (Flexbox/Grid), Tailwind CSS, and intermediate JavaScript (DOM manipulation, async/await). Build responsive static websites."
       },
       {
-        title: "Module 2: React.js & UI Development",
-        desc: "Master component architecture, state management, hooks, routing, and modern API integration using Axios and Fetch."
+        week: "Weeks 5-10",
+        title: "React.js & Advanced UI Development",
+        desc: "Master component architecture, state management (Redux/Context), React Hooks, React Router, and modern API integration using Axios."
       },
       {
-        title: "Module 3: Server-side Coding with Node & Express",
-        desc: "Build scalable backends. Understand middleware, express routing, requests/responses, and CRUD operations."
+        week: "Weeks 11-14",
+        title: "Server-side Coding with Node & Express",
+        desc: "Build scalable backend architecture. Understand middleware, Express routing, HTTP requests/responses, and CRUD operations."
       },
       {
-        title: "Module 4: Databases & Data Modeling",
+        week: "Weeks 15-18",
+        title: "Databases & Data Modeling (MongoDB)",
         desc: "Dive deep into MongoDB and Mongoose. Learn schema design, validations, aggregation frameworks, and query optimizations."
       },
       {
-        title: "Module 5: Security, Authentication & APIs",
-        desc: "Implement JSON Web Tokens (JWT), session cookies, OAuth, role-based access control, and robust API security practices."
+        week: "Weeks 19-21",
+        title: "Security, Authentication & APIs",
+        desc: "Implement JSON Web Tokens (JWT), session cookies, OAuth (Google/GitHub login), role-based access control, and robust API security practices."
       },
       {
-        title: "Module 6: Cloud Deployment & CI/CD",
-        desc: "Understand git workflows, containerization basics, cloud hosting (Render, Vercel, AWS), and automated deployment pipelines."
+        week: "Weeks 22-24",
+        title: "Cloud Deployment, CI/CD & Capstone",
+        desc: "Understand git workflows, Docker containerization basics, cloud hosting (Render, AWS, Vercel), and build the final Capstone Project."
+      }
+    ],
+    projects: [
+      {
+        title: "E-Commerce Platform (MERN)",
+        desc: "A fully functional e-commerce app with cart management, Stripe payment integration, admin dashboard, and user order history.",
+        tech: "React, Node.js, MongoDB, Stripe API"
+      },
+      {
+        title: "Real-time Chat Application",
+        desc: "A web-based messaging app featuring real-time socket connections, private rooms, and read receipts.",
+        tech: "Socket.io, Express, React, Tailwind"
+      },
+      {
+        title: "Kanban Project Manager",
+        desc: "A drag-and-drop task management tool similar to Trello with persistent database storage and team collaboration features.",
+        tech: "React, Redux, Node.js, JWT"
       }
     ],
     skills: [
@@ -47,19 +72,17 @@ export const coursesData = {
       "Git-flow and Professional Collaboration",
       "Cloud Infrastructure and Deployment"
     ],
-    outcomes: [
-      "Deploy 5 production-ready full-stack applications to your portfolio.",
-      "Understand database performance optimization and index structures.",
-      "Integrate complex third-party services and payment gateways.",
-      "Confidently pass technical interviews for mid-level software engineering positions."
-    ],
-    careers: [
-      "Full Stack Developer",
-      "Frontend Engineer",
-      "Backend Developer",
-      "Software Engineer",
-      "Web Applications Architect"
-    ]
+    careerDetails: {
+      salaryRange: "₹6 LPA - ₹18 LPA",
+      demand: "Very High - 45% YoY Growth",
+      roles: [
+        "Full Stack Developer",
+        "Frontend Engineer",
+        "Backend Developer",
+        "Software Engineer",
+        "Web Applications Architect"
+      ]
+    }
   },
   "python-automation": {
     title: "Python Automation",
@@ -68,37 +91,57 @@ export const coursesData = {
     shortDesc: "Automate manual tasks, scrape complex websites, write scripts, and master Selenium browser automation.",
     overview: "Unleash the power of Python to automate your daily workflows, process large volumes of data, and scrape web pages with ease. From managing local files and automating Excel sheets to building complex browser scripts using Selenium, this course is designed to make you an automation wizard capable of boosting operational efficiency in any role.",
     duration: "3 Months",
+    durationWeeks: 12,
     level: "Beginner to Intermediate",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    price: "₹18,999",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
     industryRelevance: "Manual operations cost time and introduce errors. Organizations across the globe rely on automation scripts to scrape market intelligence, automatically update financial ledgers, test software applications, and orchestrate server tasks.",
     technologies: [
-      "Python Basics", "Automation Scripts", "Selenium", "Web Scraping", 
-      "APIs", "Excel Automation", "File Handling", "Task Scheduling", "Data Processing"
+      "Python 3", "Selenium Webdriver", "BeautifulSoup", "Pandas", 
+      "Requests API", "OpenPyXL (Excel)", "Cron Jobs", "Regex", "Data Processing"
     ],
-    modules: [
+    curriculum: [
       {
-        title: "Module 1: Python Core Essentials",
+        week: "Weeks 1-2",
+        title: "Python Core Essentials",
         desc: "Get comfortable with variables, complex data structures (lists/dicts), functions, error handling, and basic object-oriented programming."
       },
       {
-        title: "Module 2: File System & Text Processing",
-        desc: "Learn pattern matching using Regex, automating operations on files/folders, and working with CSV, JSON, and PDF files."
+        week: "Weeks 3-4",
+        title: "File System & Document Automation",
+        desc: "Learn pattern matching using Regex, automating operations on files/folders, working with JSON/PDF files, and Excel automation using OpenPyXL."
       },
       {
-        title: "Module 3: Web Scraping & HTTP Clients",
+        week: "Weeks 5-7",
+        title: "Web Scraping & HTTP Clients",
         desc: "Scrape web layouts using BeautifulSoup and Requests. Learn to handle nested HTML tables, images, and standard API responses."
       },
       {
-        title: "Module 4: Excel & Sheet Automation",
-        desc: "Master library OpenPyXL. Automate reports, manipulate cells, apply arithmetic formulas, and generate custom Excel charts dynamically."
-      },
-      {
-        title: "Module 5: Browser Automation with Selenium",
+        week: "Weeks 8-10",
+        title: "Browser Automation with Selenium",
         desc: "Control web browsers programmatically. Handle forms, simulate clicks, bypass wait-limits, and automate manual user workflows."
       },
       {
-        title: "Module 6: Orchestration & Task Scheduling",
-        desc: "Deploy scripts on servers, schedule tasks with Cron / Windows Task Scheduler, and set up automated email notifications for failures."
+        week: "Weeks 11-12",
+        title: "Task Orchestration & Capstone",
+        desc: "Deploy scripts on servers, schedule tasks with Cron / Windows Task Scheduler, set up automated email notifications, and finalize the Capstone."
+      }
+    ],
+    projects: [
+      {
+        title: "Automated Competitor Price Scraper",
+        desc: "A script that runs daily to scrape pricing data from 5 different e-commerce sites and generates an Excel comparison report.",
+        tech: "BeautifulSoup, Requests, OpenPyXL"
+      },
+      {
+        title: "Social Media Bot",
+        desc: "A Selenium-based bot that logs into accounts, likes relevant industry posts, and gathers engagement metrics.",
+        tech: "Python, Selenium Webdriver"
+      },
+      {
+        title: "Automated Invoicing System",
+        desc: "Reads data from a database, generates custom PDF invoices, and emails them automatically to clients at the end of the month.",
+        tech: "Python, FPDF, smtplib"
       }
     ],
     skills: [
@@ -109,19 +152,17 @@ export const coursesData = {
       "Asynchronous Script Orchestration",
       "Error Mitigation and Self-Healing Code"
     ],
-    outcomes: [
-      "Construct 10 automated background scripts that save hours of manual operations.",
-      "Build a multi-source web scraper generating real-time market data pipelines.",
-      "Design automated spreadsheets that generate business reports and email them.",
-      "Develop QA test automation suites using Python and Selenium webdriver."
-    ],
-    careers: [
-      "Automation Engineer",
-      "QA Automation Developer",
-      "Operations Analyst",
-      "Data Processing Specialist",
-      "Python Scripting Specialist"
-    ]
+    careerDetails: {
+      salaryRange: "₹4.5 LPA - ₹12 LPA",
+      demand: "High - Essential for Operations",
+      roles: [
+        "Automation Engineer",
+        "QA Automation Developer",
+        "Operations Analyst",
+        "Data Processing Specialist",
+        "Python Scripting Specialist"
+      ]
+    }
   },
   "full-stack-ai": {
     title: "Full Stack AI",
@@ -130,38 +171,57 @@ export const coursesData = {
     shortDesc: "Bridge software engineering and AI. Harness LLMs, prompt engineering, APIs, and build smart interactive apps.",
     overview: "Step into the next frontier of tech. This program bridges the gap between software engineering and artificial intelligence. You will learn to use Python for AI, harness Large Language Models (LLMs), write optimal prompts, integrate OpenAI APIs, build complete web apps that leverage cognitive engines, and deploy these AI models at scale.",
     duration: "4 Months",
+    durationWeeks: 16,
     level: "Intermediate to Advanced",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    price: "₹55,000",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
     industryRelevance: "AI is reshaping products worldwide. Engineers who can construct beautiful user interfaces, integrate vector indexing systems, write robust prompt constraints, and deploy models in clean production code are highly sought after by cutting-edge teams.",
     technologies: [
-      "AI Fundamentals", "Machine Learning", "Deep Learning", "LLMs", 
-      "Prompt Engineering", "AI Chatbots", "Python for AI", "OpenAI APIs", 
-      "AI Web Applications", "Model Deployment"
+      "Python & React", "OpenAI API", "LangChain", "Vector Databases (Pinecone)", 
+      "Hugging Face", "Prompt Engineering", "RAG Pipelines", "FastAPI", "Machine Learning Basics"
     ],
-    modules: [
+    curriculum: [
       {
-        title: "Module 1: Foundations of Artificial Intelligence",
-        desc: "Learn about the AI spectrum: Supervised/Unsupervised models, Neural networks, generative models, and foundational AI algorithms."
+        week: "Weeks 1-3",
+        title: "Foundations of AI & Python for ML",
+        desc: "Learn about the AI spectrum: Supervised/Unsupervised models, Neural networks, generative models, NumPy, and Pandas basics."
       },
       {
-        title: "Module 2: Generative Models & LLMs",
-        desc: "Understand how transformers work, learn tokenization, model parameters, and interact programmatically with cutting-edge models."
+        week: "Weeks 4-6",
+        title: "Generative Models & Advanced Prompting",
+        desc: "Understand transformers, model parameters, zero-shot/few-shot prompting, and chain-of-thought frameworks to guide AI behaviors."
       },
       {
-        title: "Module 3: Advanced Prompt Engineering",
-        desc: "Develop complex system instructions, explore zero-shot, few-shot prompting, and chain-of-thought frameworks to guide AI behaviors."
+        week: "Weeks 7-9",
+        title: "OpenAI APIs & Custom Connections",
+        desc: "Write clean code for Chat Completions, Text Embeddings, Audio transcription (Whisper), and image generation (DALL-E) APIs."
       },
       {
-        title: "Module 4: OpenAI APIs & Custom Connections",
-        desc: "Write clean code for Chat Completions, Text Embeddings, Audio transcription, and image generation APIs."
+        week: "Weeks 10-12",
+        title: "RAG Pipelines & Vector Storage",
+        desc: "Build Retrieval-Augmented Generation (RAG) structures using vector databases (Pinecone/Chroma) and framework libraries like LangChain."
       },
       {
-        title: "Module 5: RAG Pipelines & Vector Storage",
-        desc: "Build Retrieval-Augmented Generation (RAG) structures using vector databases like Pinecone/Chroma and framework libraries like LangChain."
+        week: "Weeks 13-16",
+        title: "AI Web App Deployment & Capstone",
+        desc: "Create full-stack React and Python-FastAPI web interfaces embedded with smart AI capabilities and deploy them globally."
+      }
+    ],
+    projects: [
+      {
+        title: "Corporate PDF Chatbot (RAG)",
+        desc: "An application where users upload massive PDF documents, and an AI agent can answer precise questions based purely on the document context.",
+        tech: "LangChain, Pinecone, OpenAI, React"
       },
       {
-        title: "Module 6: AI Web App Deployment",
-        desc: "Create full-stack React and Python-Flask web interfaces embedded with smart AI capabilities and deploy them globally."
+        title: "AI Image Generator SaaS",
+        desc: "A clone of MidJourney's web interface where users can type prompts to generate images, utilizing a credits-based authentication system.",
+        tech: "DALL-E API, React, Node.js, MongoDB"
+      },
+      {
+        title: "Automated Code Reviewer",
+        desc: "A GitHub-integrated bot that reads pull requests, analyzes code for bugs or security issues using LLMs, and posts comments automatically.",
+        tech: "Python, FastAPI, GitHub Webhooks, OpenAI"
       }
     ],
     skills: [
@@ -172,19 +232,17 @@ export const coursesData = {
       "Python for Machine Learning Tasks",
       "Smart Interactive UX/UI Design"
     ],
-    outcomes: [
-      "Build a custom customer-facing support AI chatbot trained on internal knowledgebases.",
-      "Implement a complete RAG system capable of indexing and querying thousands of documents.",
-      "Deploy a live web platform utilizing complex OpenAI API pipelines and state persistence.",
-      "Understand AI ethics, biases, safety barriers, and costs optimization."
-    ],
-    careers: [
-      "AI Integration Engineer",
-      "Prompt Specialist / Engineer",
-      "ML Integration Developer",
-      "AI Solutions Architect",
-      "Innovative Product Manager"
-    ]
+    careerDetails: {
+      salaryRange: "₹10 LPA - ₹35 LPA",
+      demand: "Surging - #1 Fastest Growing Tech Field",
+      roles: [
+        "AI Integration Engineer",
+        "Prompt Specialist / Engineer",
+        "ML Integration Developer",
+        "AI Solutions Architect",
+        "Innovative Product Manager"
+      ]
+    }
   },
   "growth-engineering": {
     title: "Growth Engineering",
@@ -193,38 +251,57 @@ export const coursesData = {
     shortDesc: "Drive user growth. Learn data tracking, funnels, technical SEO, digital marketing strategy, and conversion optimization.",
     overview: "Growth engineering is the intersection of software development, product management, and digital marketing. In this program, you will learn how to write code specifically designed to acquire and engage users, track metrics, build automated sales funnels, set up precise conversion analytics, execute sophisticated A/B tests, and optimize products for viral loops.",
     duration: "3 Months",
+    durationWeeks: 12,
     level: "Intermediate",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    price: "₹14,999",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     industryRelevance: "SaaS products, e-commerce, and startups depend on scalable growth formulas. Traditional marketing is slow; growth engineering uses automated systems, custom metrics dashboards, and software hooks to engineer viral growth.",
     technologies: [
-      "Growth Strategies", "Digital Marketing", "SEO", "Analytics", 
-      "A/B Testing", "Funnels", "User Acquisition", "Marketing Automation", 
-      "Product Growth", "User Engagement"
+      "Google Analytics 4", "Mixpanel", "Technical SEO", "A/B Testing Tools", 
+      "Email Automation", "Zapier", "Funnel Analytics", "Growth Loops", "HTML/JS for Tracking"
     ],
-    modules: [
+    curriculum: [
       {
-        title: "Module 1: The AARRR Growth Framework",
-        desc: "Master user acquisition, activation, retention, referral, and revenue cycles. Define actionable growth KPIs."
+        week: "Weeks 1-2",
+        title: "The AARRR Growth Framework",
+        desc: "Master user acquisition, activation, retention, referral, and revenue cycles. Define actionable growth KPIs (North Star metrics)."
       },
       {
-        title: "Module 2: Technical SEO & Page Performance",
+        week: "Weeks 3-4",
+        title: "Technical SEO & Page Performance",
         desc: "Optimize metadata schemas, implement structured data, speed up page rendering, and design crawler-friendly SPA architectures."
       },
       {
-        title: "Module 3: Advanced Instrumentation & Analytics",
-        desc: "Implement tracking pixels, tag managers, and telemetry tools like Google Analytics 4, Mixpanel, and custom event handlers."
+        week: "Weeks 5-7",
+        title: "Advanced Instrumentation & Analytics",
+        desc: "Implement tracking pixels, tag managers, and telemetry tools like Google Analytics 4, Mixpanel, and custom event handlers in JS."
       },
       {
-        title: "Module 4: A/B Testing & Funnel Tuning",
-        desc: "Structure landing pages, design statistical experiments, configure hotkeys/variations, and implement A/B testing platforms."
+        week: "Weeks 8-9",
+        title: "A/B Testing & Funnel Tuning",
+        desc: "Structure landing pages, design statistical experiments, configure variations, and implement A/B testing platforms like Optimizely."
       },
       {
-        title: "Module 5: Lifecycle & Marketing Automation",
-        desc: "Integrate email automated drips (e.g., SendGrid, Mailchimp), push notifications, and automate cross-platform tasks using Zapier."
+        week: "Weeks 10-12",
+        title: "Lifecycle Automation & Virality",
+        desc: "Integrate email automated drips, Zapier, design invite loops, referral reward programs, and finalize the Growth Playbook Capstone."
+      }
+    ],
+    projects: [
+      {
+        title: "Viral Waitlist Landing Page",
+        desc: "A high-converting React landing page featuring a viral referral waitlist (e.g., 'Invite 3 friends to move up the queue').",
+        tech: "React, Firebase, SendGrid API"
       },
       {
-        title: "Module 6: Viral Referral & Onboarding Loops",
-        desc: "Design invite loops, referral reward programs, interactive user walkthroughs, and trigger retention rewards."
+        title: "Custom Analytics Telemetry Dashboard",
+        desc: "A dashboard that ingests custom user click events and generates visual funnels showing exactly where users drop off.",
+        tech: "JavaScript, Mixpanel, Chart.js"
+      },
+      {
+        title: "Automated Drip Campaign System",
+        desc: "A complex Zapier + Mailchimp architecture that tracks a user's behavior and sends personalized emails based on their app usage.",
+        tech: "Zapier, Mailchimp, Webhooks"
       }
     ],
     skills: [
@@ -235,19 +312,17 @@ export const coursesData = {
       "Dynamic Referral Engine Construction",
       "Marketing Stack Software Integrations"
     ],
-    outcomes: [
-      "Instrument a React application with extensive multi-event data tracking models.",
-      "Build a complete multi-step referral campaign engine with user rewards.",
-      "Optimize a slow landing page's Core Web Vitals to increase visual score and conversion.",
-      "Design, run, and report on a live interactive A/B testing campaign."
-    ],
-    careers: [
-      "Growth Engineer",
-      "Conversion Optimization Specialist",
-      "Growth Product Manager",
-      "Technical Marketing Specialist",
-      "Retention & Analytics Architect"
-    ]
+    careerDetails: {
+      salaryRange: "₹5 LPA - ₹15 LPA",
+      demand: "Very High - Core to SaaS Survival",
+      roles: [
+        "Growth Engineer",
+        "Conversion Optimization Specialist",
+        "Growth Product Manager",
+        "Technical Marketing Specialist",
+        "Retention & Analytics Architect"
+      ]
+    }
   },
   "data-analytics-business-development": {
     title: "Data Analytics & Business Development",
@@ -256,38 +331,57 @@ export const coursesData = {
     shortDesc: "Master SQL, Power BI, Advanced Excel, and business growth strategy to become a data-driven leader.",
     overview: "This program is designed for future business leaders and analytical minds. You will learn to extract data with SQL, model it in Excel, construct interactive dashboards in Power BI, and write clean Python analytics code. Beyond the technical skills, you will master market research, growth strategy, and high-impact communication to convert analysis into successful business outcomes.",
     duration: "4 Months",
+    durationWeeks: 16,
     level: "Beginner to Intermediate",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    price: "₹24,999",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
     industryRelevance: "Modern business operations are entirely centered around metrics. Having both the analytic capacity to process numbers and the business development insight to transform metrics into operational opportunities creates highly valued candidates.",
     technologies: [
-      "Excel", "SQL", "Power BI", "Python Analytics", "Data Visualization", 
-      "Business Reporting", "Market Research", "Business Strategy", 
-      "Communication Skills", "Sales & Growth Analytics"
+      "Advanced Excel", "SQL Database Querying", "Power BI", "DAX", 
+      "Python (Pandas/Matplotlib)", "Market Research", "CRM Tools", "Presentation & Deck Design"
     ],
-    modules: [
+    curriculum: [
       {
-        title: "Module 1: Advanced Business Excel",
-        desc: "Master key concepts: lookups, pivot fields, logical statements, conditional formats, and structural data cleanup."
+        week: "Weeks 1-3",
+        title: "Advanced Business Excel",
+        desc: "Master key concepts: advanced VLOOKUP/XLOOKUP, pivot fields, logical statements, conditional formats, macros, and structural data cleanup."
       },
       {
-        title: "Module 2: Database Querying with SQL",
-        desc: "Learn key commands: Select, Filter, Aggregations, complex Multi-Table Joins, Group By, Subqueries, and View structures."
+        week: "Weeks 4-7",
+        title: "Database Querying with SQL",
+        desc: "Learn key commands: Select, Filter, Aggregations, complex Multi-Table Joins, Group By, Subqueries, and View structures on massive datasets."
       },
       {
-        title: "Module 3: Business Intelligence with Power BI",
-        desc: "Create dynamic reports. Import custom datasets, write DAX metrics formulas, map tables, and deploy visual charts."
+        week: "Weeks 8-10",
+        title: "Business Intelligence with Power BI",
+        desc: "Create dynamic interactive reports. Import custom datasets, write DAX metrics formulas, map relational tables, and deploy visual charts."
       },
       {
-        title: "Module 4: Python Analytical Ecosystem",
-        desc: "Perform quick data analysis using Pandas, plot visual charts using Matplotlib and Seaborn, and clean massive datasets."
+        week: "Weeks 11-13",
+        title: "Python Analytical Ecosystem",
+        desc: "Perform quick data analysis using Pandas, plot visual charts using Matplotlib and Seaborn, and clean massive raw CSV files programmatically."
       },
       {
-        title: "Module 5: Market Research & Client Tactics",
-        desc: "Analyze industry structures, map target client personas, compile competitor insights, and outline cold-outreach systems."
+        week: "Weeks 14-16",
+        title: "Business Strategy & Executive Presenting",
+        desc: "Analyze industry structures, map target client personas, compile competitor insights, structure high-converting pitch decks, and Capstone."
+      }
+    ],
+    projects: [
+      {
+        title: "Global Sales KPI Dashboard",
+        desc: "A comprehensive Power BI dashboard connected to a SQL database that tracks global sales, YoY growth, and regional performance.",
+        tech: "SQL, Power BI, DAX"
       },
       {
-        title: "Module 6: Dynamic Presenting & Storytelling",
-        desc: "Master executive data reports, structure high-converting pitch decks, and build compelling sales narratives."
+        title: "Market Expansion Strategy Deck",
+        desc: "A massive researched presentation utilizing Python Pandas to analyze competitor pricing and presenting the findings in an executive deck.",
+        tech: "Python, Pandas, PowerPoint/Keynote"
+      },
+      {
+        title: "Churn Prediction Analytics",
+        desc: "An advanced Excel model that uses historical data to predict which corporate clients are highly likely to cancel their subscriptions.",
+        tech: "Advanced Excel, Pivot Tables, Statistical Modeling"
       }
     ],
     skills: [
@@ -298,18 +392,16 @@ export const coursesData = {
       "Strategic Business Development Pipelines",
       "Executive Professional Presentations"
     ],
-    outcomes: [
-      "Build a series of interactive corporate intelligence dashboards in Power BI.",
-      "Construct a multi-table business database from raw files using advanced SQL schema design.",
-      "Design a real-world market intelligence pitch deck using live data points.",
-      "Synthesize massive sales logs with Python script analysis to identify hidden bottlenecks."
-    ],
-    careers: [
-      "Business Analyst",
-      "Data Analyst / Consultant",
-      "Business Development Executive",
-      "Strategy & Operations Specialist",
-      "Sales Analytics Manager"
-    ]
+    careerDetails: {
+      salaryRange: "₹6 LPA - ₹16 LPA",
+      demand: "High - Every sector requires analysts",
+      roles: [
+        "Business Analyst",
+        "Data Analyst / Consultant",
+        "Business Development Executive",
+        "Strategy & Operations Specialist",
+        "Sales Analytics Manager"
+      ]
+    }
   }
 };
