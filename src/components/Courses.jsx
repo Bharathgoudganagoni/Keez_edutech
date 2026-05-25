@@ -1,57 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaClock } from 'react-icons/fa';
+import { coursesData } from '../data/coursesData';
 
 const Courses = () => {
-  const handleWIP = (e) => {
-    e.preventDefault();
-    alert("Work in Progress: Enrollment functionality is coming soon!");
-  };
-
-  const courses = [
-    {
-      title: 'Full Stack Web Development',
-      desc: 'Master React, Node.js, and MongoDB. Build real-world projects and get industry-ready.',
-      duration: '6 Months',
-      level: 'Beginner to Pro',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      title: 'AI & Prompt Engineering',
-      desc: 'Learn to leverage AI tools, write effective prompts, and build AI-driven applications.',
-      duration: '3 Months',
-      level: 'Intermediate',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      title: 'Data Science Pro',
-      desc: 'Dive deep into data analysis, machine learning algorithms, and data visualization techniques.',
-      duration: '5 Months',
-      level: 'Advanced',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      title: 'Cyber Security Essentials',
-      desc: 'Learn the fundamentals of ethical hacking, network security, and threat mitigation.',
-      duration: '4 Months',
-      level: 'Intermediate',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      title: 'UI/UX Design Masterclass',
-      desc: 'Master Figma, user research, wireframing, and creating beautiful digital experiences.',
-      duration: '3 Months',
-      level: 'Beginner',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      title: 'Internship Programs',
-      desc: 'Gain practical experience with guaranteed internships at top tech firms.',
-      duration: '3-6 Months',
-      level: 'Intermediate',
-      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    }
-  ];
+  const coursesList = Object.values(coursesData);
 
   return (
     <section id="courses" className="courses-section">
@@ -62,9 +16,9 @@ const Courses = () => {
         </div>
 
         <div className="courses-grid">
-          {courses.map((course, index) => (
+          {coursesList.map((course, index) => (
             <motion.div 
-              key={index} 
+              key={course.slug} 
               className="course-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -73,14 +27,16 @@ const Courses = () => {
             >
               <div className="course-image" style={{ background: 'none', padding: 0 }}>
                 <img src={course.image} alt={course.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div className="level-badge" style={{ background: 'rgba(0, 0, 0, 0.6)' }}>{course.level}</div>
+                <div className="level-badge" style={{ background: 'rgba(0, 0, 0, 0.65)' }}>{course.level}</div>
               </div>
               <div className="course-content">
                 <h3 className="course-title">{course.title}</h3>
-                <p className="course-desc">{course.desc}</p>
+                <p className="course-desc">{course.shortDesc}</p>
                 <div className="course-footer">
-                  <div className="course-duration"><FaClock /> {course.duration}</div>
-                  <button className="enroll-btn" onClick={handleWIP}>Enroll <FaArrowRight /></button>
+                  <div className="course-duration"><FaClock style={{ color: 'var(--color-accent)' }} /> {course.duration}</div>
+                  <Link to={`/courses/${course.slug}`} className="enroll-btn" style={{ textDecoration: 'none' }}>
+                    Learn More <FaArrowRight />
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -92,3 +48,4 @@ const Courses = () => {
 };
 
 export default Courses;
+

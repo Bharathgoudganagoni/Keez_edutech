@@ -1,0 +1,616 @@
+/* Detailed Course Landing Page Stylesheet */
+
+.course-detail-wrapper {
+  padding-top: 80px; /* offset for fixed navbar */
+  background-color: var(--color-light);
+  font-family: var(--font-main);
+  color: var(--color-primary);
+}
+
+/* Hero Section */
+.course-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(153, 204, 0, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.course-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.course-hero-content h1 {
+  font-size: 3.25rem;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-heading);
+}
+
+.course-hero-tagline {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.course-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-badge-pill {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-badge-pill.accent {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.course-hero-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  aspect-ratio: 16 / 10;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.course-hero-image-wrapper:hover .course-hero-image {
+  transform: scale(1.05);
+}
+
+/* Stats Row Component */
+.course-stats-container {
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.course-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.stat-item:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 51, 153, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+  font-size: 1.25rem;
+}
+
+.stat-info-title {
+  font-size: 0.75rem;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.stat-info-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Detailed Content Structure */
+.course-sections-container {
+  padding: 5rem 0 2rem 0;
+}
+
+.details-layout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 3.5rem;
+}
+
+.overview-box {
+  margin-bottom: 3.5rem;
+}
+
+.overview-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 1.5rem;
+}
+
+.detail-section-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.detail-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Careers Card Sticky Box */
+.careers-sidebar-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.careers-sidebar-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+}
+
+.career-roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.career-role-chip {
+  background: #F1F5F9;
+  border-left: 3px solid var(--color-accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.career-role-chip:hover {
+  transform: translateX(4px);
+  background: #E2E8F0;
+}
+
+/* Technologies Section */
+.technologies-section {
+  background: var(--color-white);
+  padding: 5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tech-badge-card {
+  background: var(--color-light);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tech-badge-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.tech-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+.tech-badge-card span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+/* Curriculum & Modules */
+.curriculum-section {
+  padding: 5rem 0;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.module-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.75rem;
+  align-items: flex-start;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(153, 204, 0, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+.module-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  background: rgba(153, 204, 0, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.module-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.module-content p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Split Skills & Outcomes */
+.split-benefits-section {
+  background: var(--color-white);
+  padding: 5rem 0;
+}
+
+.benefits-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.benefit-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.benefit-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.benefit-icon-check {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.benefit-bullet-item span {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* CTA Bottom Section */
+.cta-footer-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-footer-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(153, 204, 0, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-footer-content {
+  position: relative;
+  z-index: 5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-footer-title {
+  font-size: 2.75rem;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-heading);
+}
+
+.cta-footer-desc {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.cta-footer-btn {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-md);
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(153, 204, 0, 0.3);
+}
+
+.cta-footer-btn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Premium Modal for Enrollment Form */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  width: 100%;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  animation: modalReveal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  font-size: 1.5rem;
+  color: #64748B;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--color-primary);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.modal-subtitle {
+  font-size: 0.875rem;
+  color: #64748B;
+  margin-bottom: 1.75rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #CBD5E1;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 51, 153, 0.15);
+}
+
+.submit-btn {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0.875rem;
+  border-radius: var(--radius-md);
+  margin-top: 0.5rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .course-hero {
+    padding: 4rem 0;
+  }
+  .course-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .course-hero-content h1 {
+    font-size: 2.75rem;
+  }
+  .course-hero-tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .course-hero-badges {
+    justify-content: center;
+  }
+  .course-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.25rem;
+  }
+  .stat-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  .details-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .careers-sidebar-card {
+    position: relative;
+    top: 0;
+  }
+  .benefits-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-hero-content h1 {
+    font-size: 2.25rem;
+  }
+  .course-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .stat-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+  }
+  .cta-footer-title {
+    font-size: 2rem;
+  }
+  .module-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+  .module-num {
+    margin: 0 auto;
+  }
+}

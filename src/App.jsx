@@ -10,6 +10,7 @@ import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import About from './pages/About';
 import CoursesPage from './pages/CoursesPage';
+import CourseDetailsPage from './pages/CourseDetailsPage';
 import InternshipsPage from './pages/InternshipsPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses/:slug" element={<CourseDetailsPage />} />
           <Route path="/internships" element={<InternshipsPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
